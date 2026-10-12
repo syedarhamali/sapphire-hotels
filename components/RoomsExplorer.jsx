@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { RoomCard } from "@/components/RoomCard";
 import { Reveal } from "@/components/Reveal";
-import { TiltCard } from "@/components/TiltCard";
-
 function BedIcon({ count = 1 }) {
   return (
     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
@@ -70,9 +68,7 @@ export function RoomsExplorer({ rooms }) {
       <div className="grid gap-6 sm:grid-cols-2">
         {visible.map((room, i) => (
           <Reveal key={room.slug} delay={i * 70}>
-            <TiltCard className="h-full rounded-[36px]">
-              <RoomCard room={room} amenityCount={4} index={rooms.indexOf(room)} />
-            </TiltCard>
+            <RoomCard room={room} amenityCount={4} index={rooms.indexOf(room)} />
           </Reveal>
         ))}
       </div>

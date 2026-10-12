@@ -15,7 +15,7 @@ export function PageBanner({ eyebrow, title, lede, image, imageAlt, children }) 
         <div className="vignette absolute inset-0" />
 
         <div className="relative flex min-h-[56vh] flex-col justify-end p-7 sm:p-12 lg:p-16">
-          <Eyebrow className="!border-white/25 !bg-white/10 !text-white">{eyebrow}</Eyebrow>
+          <Eyebrow className="!border-white/25 max-w-max !bg-white/10 !text-white">{eyebrow}</Eyebrow>
           <SplitHeading as="h1" text={title} immediate className="max-w-3xl text-5xl text-white sm:text-7xl lg:text-8xl" />
           {lede ? <p className="mt-5 max-w-[40rem] text-lg text-white/80 sm:text-xl">{lede}</p> : null}
           {children ? <div className="mt-7 flex flex-wrap gap-3">{children}</div> : null}

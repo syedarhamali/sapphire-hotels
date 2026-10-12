@@ -55,7 +55,7 @@ export default async function RoomDetail({ params }) {
             <RoomGallery images={room.images} />
 
             <div className="grid gap-5 sm:grid-cols-[1.2fr_0.8fr]">
-              <Reveal className="ring-gradient rounded-[28px] p-6 sm:p-8">
+              <Reveal className="ring-gradient rounded-[28px] bg-paper p-6 sm:p-8">
                 <h2 className="text-3xl">The room</h2>
                 <p className="mt-3 text-ink/75">{room.description}</p>
                 {room.stairs ? (

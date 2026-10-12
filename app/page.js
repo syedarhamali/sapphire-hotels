@@ -9,7 +9,6 @@ import { Marquee } from "@/components/Marquee";
 import { ScrollStory } from "@/components/ScrollStory";
 import { SplitHeading } from "@/components/SplitHeading";
 import { CountUp } from "@/components/CountUp";
-import { TiltCard } from "@/components/TiltCard";
 import { HorizontalScroll } from "@/components/HorizontalScroll";
 import { HeroVideo } from "@/components/HeroVideo";
 import { attractions, bookingUrl, gallery, hotel, included, rooms } from "@/lib/data";
@@ -51,7 +50,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* ───────────── Hero ───────────── */}
-      <section className="relative mx-auto mt-3 min-h-[calc(100svh-7.25rem-0.75rem)] w-[calc(100%-1.5rem)] max-w-frame overflow-hidden rounded-[40px] sm:w-[calc(100%-2rem)]">
+      <section className="relative min-h-[100svh] w-full overflow-hidden rounded-b-[40px]">
         <HeroVideo
           src="/videos/hero.mp4?v=hd"
           poster="/photos/entrance.jpg"
@@ -60,7 +59,7 @@ export default function Home() {
         />
         <div className="vignette absolute inset-0" />
 
-        <div className="relative mx-auto flex min-h-[calc(100svh-7.25rem-0.75rem)] w-full max-w-frame flex-col justify-end px-5 pb-40 sm:px-8 lg:pb-44">
+        <div className="relative mx-auto flex min-h-[100svh] w-full max-w-frame flex-col justify-end px-5 pb-40 sm:px-8 lg:pb-44">
           <div className="max-w-[38rem]">
             <Eyebrow className="!border-white/25 !bg-white/10 !text-white">3-star boutique · Hammersmith · W6</Eyebrow>
             <SplitHeading
@@ -99,7 +98,7 @@ export default function Home() {
             <Reveal
               key={fact.label}
               delay={i * 70}
-              className="ring-gradient rounded-[24px] p-6 text-center transition-transform duration-500 hover:-translate-y-1"
+              className="ring-gradient rounded-[24px] bg-paper p-6 text-center transition-transform duration-500 hover:-translate-y-1"
             >
               <strong className="block font-serif text-4xl text-sapphire-600 sm:text-5xl">
                 {fact.text ? fact.text : <CountUp to={fact.to} prefix={fact.prefix} suffix={fact.suffix} />}
@@ -129,9 +128,7 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2">
             {rooms.map((room, i) => (
               <Reveal key={room.slug} delay={i * 90}>
-                <TiltCard className="h-full rounded-[32px]">
-                  <RoomCard room={room} index={i} />
-                </TiltCard>
+                <RoomCard room={room} index={i} />
               </Reveal>
             ))}
           </div>
@@ -218,7 +215,7 @@ export default function Home() {
         ))}
         <Link
           href="/attractions"
-          className="ring-gradient group flex h-[440px] w-[70vw] shrink-0 flex-col items-center justify-center gap-4 rounded-[28px] text-center sm:w-[300px] lg:h-[480px]"
+          className="ring-gradient group flex h-[440px] w-[70vw] shrink-0 flex-col items-center justify-center gap-4 rounded-[28px] bg-paper text-center sm:w-[300px] lg:h-[480px]"
         >
           <span className="grid h-16 w-16 place-items-center rounded-full bg-sapphire-600 text-2xl text-white transition-transform duration-500 group-hover:scale-110">
             →

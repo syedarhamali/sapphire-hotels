@@ -33,6 +33,8 @@ export function Header() {
     return href === "/" ? pathname === "/" : pathname.startsWith(href);
   }
 
+  const isHome = pathname === "/";
+
   return (
     <>
       <a
@@ -42,10 +44,10 @@ export function Header() {
         Skip to content
       </a>
 
-      <header className="sticky top-0 z-40 bg-paper pt-3">
-        <div className="relative mx-auto flex h-20 w-[calc(100%-1.5rem)] max-w-frame items-center gap-4 rounded-full border border-sand bg-white px-3 shadow-soft sm:h-[104px] sm:w-[calc(100%-2rem)] sm:px-5">
+      <header className={`top-0 z-40 pt-3 ${isHome ? "fixed inset-x-0" : "sticky bg-paper"}`}>
+        <div className="relative mx-auto flex h-14 w-[calc(100%-1.5rem)] max-w-7xl items-center gap-4 rounded-full border border-sand bg-white px-3 shadow-soft sm:h-16 sm:w-[calc(100%-2rem)] sm:px-5">
           <Link href="/" aria-label="Sapphire Hotel London, home" className="flex shrink-0 items-center">
-            <Image src="/logo.png" alt="Sapphire Hotel London" width={1020} height={606} priority className="h-[62px] w-auto sm:h-[88px]" />
+            <Image src="/logo.png" alt="Sapphire Hotel London" width={1020} height={606} priority className="h-10 w-auto sm:h-12" />
           </Link>
 
           <nav aria-label="Primary" className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-0.5 lg:flex">
@@ -93,7 +95,7 @@ export function Header() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="fixed inset-x-3 top-[5.75rem] bottom-3 z-30 overflow-auto rounded-[28px] border border-sand bg-white px-5 py-3 shadow-lift sm:inset-x-4 sm:top-[7.25rem] lg:hidden"
+          className="fixed inset-x-3 top-[4.25rem] bottom-3 z-30 overflow-auto rounded-[28px] border border-sand bg-white px-5 py-3 shadow-lift sm:inset-x-4 sm:top-[4.75rem] lg:hidden"
         >
           {nav.map((item) => (
             <Link

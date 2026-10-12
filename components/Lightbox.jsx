@@ -60,18 +60,17 @@ export function Lightbox({ images, index, onClose, onChange }) {
         </button>
 
         <figure className="mx-auto flex min-h-0 max-w-full flex-1 flex-col items-center justify-center gap-3">
-          <div className="relative max-h-[68vh] w-full max-w-3xl">
+          <div className="relative h-[68vh] w-full max-w-4xl">
             <Image
               src={image.src}
               alt={image.alt}
-              width={1600}
-              height={1200}
-              sizes="(min-width: 768px) 70vw, 100vw"
-              className="mx-auto h-auto max-h-[68vh] w-auto rounded-lg object-contain"
+              fill
+              sizes="(min-width: 768px) 80vw, 100vw"
+              className="rounded-lg object-contain"
               priority
             />
           </div>
-          <figcaption className="flex w-full max-w-3xl justify-between gap-4 text-sm text-white/80">
+          <figcaption className="flex w-full max-w-4xl justify-between gap-4 text-sm text-white/80">
             <span>
               {index + 1} / {images.length}
             </span>

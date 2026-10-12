@@ -47,7 +47,7 @@ export function BookingCard({ heading = "Check availability", id = "booking", cl
       id={id}
       onSubmit={onSubmit}
       noValidate
-      className={`ring-gradient relative w-full overflow-hidden rounded-[32px] p-5 shadow-soft sm:p-6 ${className}`}
+      className={`ring-gradient relative w-full overflow-hidden rounded-[32px] bg-paper p-5 shadow-soft sm:p-6 ${className}`}
     >
       <div className="mb-4">
         <h2 className="mb-1 text-2xl">{heading}</h2>

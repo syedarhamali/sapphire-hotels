@@ -45,7 +45,7 @@ export default function Rooms() {
 
       <section className="mx-auto mt-24 w-full max-w-frame px-4 sm:px-6">
         <SplitHeading text="Compare at a glance." className="text-4xl sm:text-5xl" />
-        <Reveal className="ring-gradient mt-6 overflow-x-auto rounded-[28px]">
+        <Reveal className="ring-gradient mt-6 overflow-x-auto rounded-[28px] bg-paper">
           <table className="w-full min-w-[640px] border-collapse">
             <caption className="sr-only">Room types compared by beds, guests and access</caption>
             <thead>

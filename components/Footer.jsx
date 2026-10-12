@@ -4,7 +4,7 @@ import { bookingUrl, hotel, nav } from "@/lib/data";
 
 export function Footer() {
   return (
-    <footer className="relative mx-auto mb-3 mt-6 w-[calc(100%-1.5rem)] max-w-frame overflow-hidden rounded-[40px] border border-sand bg-white text-ink/70 sm:w-[calc(100%-2rem)]">
+    <footer className="relative my-3 w-full overflow-hidden rounded-[40px] border border-sand bg-white text-ink/70">
       <div className="relative mx-auto grid w-full max-w-frame gap-10 px-5 pb-8 pt-12 sm:px-8 md:grid-cols-[1.3fr_0.7fr_1fr]">
         <div>
           <Image src="/logo.png" alt="Sapphire Hotel London" width={1020} height={606} className="mb-5 h-24 w-auto sm:h-28" />

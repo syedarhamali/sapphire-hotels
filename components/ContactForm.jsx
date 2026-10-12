@@ -32,7 +32,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="ring-gradient grid gap-3 rounded-[32px] p-6 shadow-soft">
+    <form onSubmit={onSubmit} noValidate className="ring-gradient grid gap-3 rounded-[32px] bg-paper p-6 shadow-soft">
       <h2 className="text-xl">Send an enquiry</h2>
       <p className="text-sm text-muted">
         This opens an email to the hotel in your mail app. It is not sent until you send that email.

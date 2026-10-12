@@ -23,7 +23,7 @@ export function RoomCard({ room, amenityCount = 0, index = 0 }) {
   return (
     <Link
       href={`/rooms/${room.slug}`}
-      className="ring-gradient group relative block h-full overflow-hidden rounded-[32px] p-2.5 shadow-soft transition-all duration-500 hover:-translate-y-2 hover:shadow-lift"
+      className="ring-gradient group relative block h-full overflow-hidden rounded-[32px] bg-paper p-2.5 shadow-soft"
     >
       <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] bg-sand">
         <Image
@@ -31,7 +31,7 @@ export function RoomCard({ room, amenityCount = 0, index = 0 }) {
           alt={room.images[0].alt}
           fill
           sizes="(min-width: 1024px) 40vw, 90vw"
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.07]"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-night/85 via-night/10 to-transparent" />
 

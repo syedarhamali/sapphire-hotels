@@ -56,7 +56,7 @@ export default function About() {
           </Reveal>
         </div>
 
-        <Reveal as="aside" delay={100} className="ring-gradient relative overflow-hidden rounded-[28px] p-7 sm:p-8">
+        <Reveal as="aside" delay={100} className="ring-gradient relative overflow-hidden rounded-[28px] bg-paper p-7 sm:p-8">
           <h2 className="text-3xl">Practical</h2>
           <dl className="mb-6 mt-3">
             {[
@@ -81,7 +81,7 @@ export default function About() {
       <section className="mx-auto mt-24 w-full max-w-frame px-4 sm:px-6">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((item, i) => (
-            <Reveal key={item.title} delay={i * 70} className="ring-gradient rounded-[24px] p-6 transition-transform duration-500 hover:-translate-y-1">
+            <Reveal key={item.title} delay={i * 70} className="ring-gradient rounded-[24px] bg-paper p-6 transition-transform duration-500 hover:-translate-y-1">
               <span className="font-serif text-4xl text-sapphire-600/50">0{i + 1}</span>
               <h3 className="mt-4 text-xl">{item.title}</h3>
               <p className="mt-2 text-sm text-muted">{item.text}</p>
